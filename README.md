@@ -4,6 +4,8 @@ A browser-based decision-support prototype that gives a small or medium enterpri
 
 > **Educational prototype.** The score is an internally designed readiness index. It is **not** a credit score, not financial advice, and not a prediction of loan or financing approval. Weights and thresholds are design choices that have not yet been empirically validated.
 
+**Live demo:** [https://zunairaftm.github.io/smefinancereadinesssimulator/](https://zunairaftm.github.io/smefinancereadinesssimulator/)
+
 ![Landing page](docs/screenshots/landing.png)
 
 ## Features
@@ -89,7 +91,7 @@ js/
   form.js, dashboard.js, whatif.js   Page logic
   *.test.js         Automated checks
 docs/screenshots/   README images
-netlify.toml        Static-site deployment settings
+netlify.toml        Optional Netlify settings (the live site is served by GitHub Pages)
 ```
 
 ## Design basis
