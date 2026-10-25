@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f2a43">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SME Finance Readiness &amp; Improvement Simulator">
+  <meta property="og:title" content="SME Finance Readiness &amp; Improvement Simulator">
+  <meta property="og:description" content="A browser-based decision-support prototype: a 100-point finance readiness score, key ratios, rule-based recommendations and a What-If simulator for small and medium enterprises.">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>SME Finance Readiness Simulator</title>
+  <meta name="description" content="Check how finance-ready a small business is. Get a 100-point readiness score, key financial indicators and rule-based recommendations in minutes. Free, no sign-up.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f2a43'/%3E%3Cpath d='M7 22l6-7 5 4 7-10' fill='none' stroke='%2336c28e' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="SME Finance Readiness Simulator, home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#1f9d6b"/>
+          <path d="M7 22l6-7 5 4 7-10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>SME Finance <strong>Readiness</strong></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#how-it-works">How it works</a>
+        <a href="#dimensions">Scoring</a>
+        <a href="#outputs">What you get</a>
+        <a href="#methodology">Methodology</a>
+        <a href="whatif.html">What-If</a>
+      </nav>
+      <a class="btn btn-small" href="assessment.html">Start assessment</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Decision-support tool for small and medium enterprises</p>
+          <h1>Is your business ready for financing?</h1>
+          <p class="lead">Answer a few questions about your finances and financial practices. Get a readiness score out of 100, the key ratios behind it, and clear next steps, in minutes and with no sign-up.</p>
+          <div class="hero-actions">
+            <a class="btn" href="assessment.html">Start free assessment</a>
+            <a class="btn btn-ghost" href="#how-it-works">See how it works</a>
+          </div>
+          <ul class="trust-list">
+            <li>No login</li>
+            <li>Runs in your browser</li>
+            <li>Your data stays on your device</li>
+          </ul>
+        </div>
+
+        <aside class="score-card" aria-label="Illustrative example result">
+          <p class="card-tag">Illustrative example, not a real business</p>
+          <div class="score-top">
+            <div class="ring" style="--pct: 86.2" role="img" aria-label="Score 86.2 out of 100">
+              <div class="ring-inner">
+                <span class="ring-num">86.2</span>
+                <span class="ring-of">/ 100</span>
+              </div>
+            </div>
+            <div>
+              <p class="mini-label">Classification</p>
+              <p class="badge badge-ready">Ready</p>
+            </div>
+          </div>
+          <ul class="dim-list">
+            <li>
+              <div class="dim-row"><span>Financial Health</span><span>21.9 / 25</span></div>
+              <div class="bar"><span style="width: 87.5%"></span></div>
+            </li>
+            <li>
+              <div class="dim-row"><span>Cash-Flow Management</span><span>17.2 / 20</span></div>
+              <div class="bar"><span style="width: 86.1%"></span></div>
+            </li>
+            <li>
+              <div class="dim-row"><span>Records &amp; Transparency</span><span>17.1 / 20</span></div>
+              <div class="bar"><span style="width: 85.7%"></span></div>
+            </li>
+            <li>
+              <div class="dim-row"><span>Debt &amp; Repayment Capacity</span><span>20 / 20</span></div>
+              <div class="bar"><span style="width: 100%"></span></div>
+            </li>
+            <li>
+              <div class="dim-row"><span>Financial Planning</span><span>10 / 15</span></div>
+              <div class="bar bar-amber"><span style="width: 66.7%"></span></div>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="section">
+      <div class="container">
+        <h2>How it works</h2>
+        <p class="section-lead">Three steps. No spreadsheets to fill in and nothing to install.</p>
+        <ol class="steps">
+          <li>
+            <span class="step-num">1</span>
+            <h3>Enter your numbers</h3>
+            <p>Add basic financials, monthly cash flow, and which record-keeping and planning practices your business follows.</p>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <h3>See your readiness score</h3>
+            <p>Get a 100-point score across five dimensions, with the key financial indicators shown alongside it.</p>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <h3>Act on the recommendations</h3>
+            <p>Receive prioritised, rule-based guidance and download a printable report to share or keep.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- DIMENSIONS -->
+    <section id="dimensions" class="section section-alt">
+      <div class="container">
+        <h2>What the score measures</h2>
+        <p class="section-lead">Readiness is more than profit. The score combines financial numbers with the practices that make a business easier to finance.</p>
+        <div class="dim-grid">
+          <article class="dim-card">
+            <p class="weight">25 pts</p>
+            <h3>Financial Health</h3>
+            <p>Liquidity, operating profitability and leverage.</p>
+          </article>
+          <article class="dim-card">
+            <p class="weight">20 pts</p>
+            <h3>Cash-Flow Management</h3>
+            <p>Cash-flow coverage, cash reserve and how often cash flow is monitored.</p>
+          </article>
+          <article class="dim-card">
+            <p class="weight">20 pts</p>
+            <h3>Records &amp; Transparency</h3>
+            <p>Seven recommended record-keeping practices, such as formal accounts and separate bank accounts.</p>
+          </article>
+          <article class="dim-card">
+            <p class="weight">20 pts</p>
+            <h3>Debt &amp; Repayment Capacity</h3>
+            <p>A cash-flow-based debt-service coverage proxy.</p>
+          </article>
+          <article class="dim-card">
+            <p class="weight">15 pts</p>
+            <h3>Financial Planning</h3>
+            <p>Six planning practices, including budgets, forecasts and an emergency plan.</p>
+          </article>
+        </div>
+        <div class="bands" aria-label="Classification bands">
+          <p class="bands-title">Classification bands</p>
+          <ul>
+            <li><span class="dot dot-ready"></span><strong>Ready</strong> 75 to 100</li>
+            <li><span class="dot dot-dev"></span><strong>Developing</strong> 50 to 74.99</li>
+            <li><span class="dot dot-need"></span><strong>Needs Improvement</strong> below 50</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTPUTS -->
+    <section id="outputs" class="section">
+      <div class="container">
+        <h2>What you get</h2>
+        <div class="out-grid">
+          <article class="out-card">
+            <h3>Readiness dashboard</h3>
+            <p>Overall score, classification, a breakdown by dimension and your top priority.</p>
+          </article>
+          <article class="out-card">
+            <h3>Key financial indicators</h3>
+            <p>Current ratio, operating profit margin, debt to assets, cash-flow coverage, cash reserve and debt-service coverage proxy.</p>
+          </article>
+          <article class="out-card">
+            <h3>Rule-based recommendations</h3>
+            <p>Each area is rated High, Medium or Low priority with a specific suggested action.</p>
+          </article>
+          <article class="out-card">
+            <h3>What-If simulator</h3>
+            <p>Change inputs and practices to see how your score could move. Exploratory scenarios, not forecasts.</p>
+          </article>
+          <article class="out-card">
+            <h3>Printable report</h3>
+            <p>A clean, one-click report you can print or save as a PDF.</p>
+          </article>
+        </div>
+        <div class="cta-band">
+          <div>
+            <h2>Ready to see your score?</h2>
+            <p>It takes a few minutes and your data never leaves your device.</p>
+          </div>
+          <a class="btn" href="assessment.html">Start free assessment</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- METHODOLOGY -->
+    <section id="methodology" class="section section-alt">
+      <div class="container narrow">
+        <h2>Methodology and limits</h2>
+        <p>This is an internally designed prototype readiness index built to support decisions and learning. It is <strong>not</strong> a credit score, a loan-approval model, or a prediction of whether financing will be approved.</p>
+        <p>The weights, thresholds and classification bands are transparent design choices informed by SME-finance literature. They have not yet been empirically validated, so results should not be used for real lending, investment or regulatory decisions.</p>
+        <p>The debt-service measure is a cash-flow proxy, not a formal lender debt-service coverage ratio (DSCR).</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>SME Finance Readiness &amp; Improvement Simulator</strong></p>
+      <p>Built by Zunaira Fatima, BBA (Finance), COMSATS Vehari. Educational prototype; not financial advice.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f2a43">
+  <title>What-If simulator | SME Finance Readiness Simulator</title>
+  <meta name="description" content="Test hypothetical improvements to an SME's finances and practices and see how the finance readiness score could change. Exploratory scenarios, not forecasts.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f2a43'/%3E%3Cpath d='M7 22l6-7 5 4 7-10' fill='none' stroke='%2336c28e' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/whatif.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="SME Finance Readiness Simulator, home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#1f9d6b"/>
+          <path d="M7 22l6-7 5 4 7-10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>SME Finance <strong>Readiness</strong></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#how-it-works">How it works</a>
+        <a href="index.html#dimensions">Scoring</a>
+        <a href="index.html#methodology">Methodology</a>
+        <a href="whatif.html">What-If</a>
+      </nav>
+      <a class="btn btn-small" href="assessment.html">Edit answers</a>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="container">
+      <h1>What-If improvement simulator</h1>
+      <p>Change selected inputs and practices to see how your readiness score could move. These are exploratory scenarios, not forecasts or predictions of financing approval.</p>
+    </div>
+  </section>
+
+  <main id="main" class="dash-wrap">
+    <div class="container">
+      <section id="wi-empty" class="empty-state" hidden>
+        <h2>No assessment found</h2>
+        <p>The What-If simulator starts from your own answers. Complete the assessment first, then come back here.</p>
+        <a class="btn" href="assessment.html">Go to the assessment</a>
+      </section>
+
+      <div id="wi" hidden>
+        <div class="wi-summary" id="wi-summary" aria-live="polite"></div>
+
+        <div class="wi-layout">
+          <form id="wi-form" class="wi-inputs" novalidate aria-label="Scenario inputs">
+            <p class="small-note">Every field starts at your current value. Change only what you want to test; changed fields are highlighted.</p>
+            <div class="wi-toolbar" id="wi-toolbar">
+              <button type="button" class="btn btn-outline btn-small" id="wi-reset">Reset to my current values</button>
+            </div>
+          </form>
+
+          <aside class="wi-details" aria-label="Scenario comparison">
+            <h2>Readiness dimensions</h2>
+            <ul id="wi-dims" class="wi-table"></ul>
+            <h2>Key indicators</h2>
+            <ul id="wi-inds" class="wi-table"></ul>
+            <p id="wi-na" class="small-note" hidden>An indicator shows n/a when its denominator is zero; it earns 0 points in the score.</p>
+          </aside>
+        </div>
+
+        <div class="notice">
+          <p><strong>Interpretation note.</strong> The What-If score applies the same prototype scoring rules to hypothetical inputs. It is an exploratory illustration, not a forecast of business performance, a credit score, or a prediction of loan approval.</p>
+        </div>
+
+        <div class="dash-actions">
+          <a class="btn btn-outline" href="results.html">Back to results</a>
+          <a class="btn btn-outline" href="assessment.html">Edit answers</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>SME Finance Readiness &amp; Improvement Simulator</strong></p>
+      <p>Built by Zunaira Fatima, BBA (Finance), COMSATS Vehari. Educational prototype; not financial advice.</p>
+    </div>
+  </footer>
+
+  <script src="js/fields.js"></script>
+  <script src="js/scoring.js"></script>
+  <script src="js/whatif.js"></script>
+</body>
+</html>

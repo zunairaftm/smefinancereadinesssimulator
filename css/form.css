@@ -1,0 +1,82 @@
+/* =========================================================
+   form.css - styles for the assessment page (Phase 2)
+   Loaded after styles.css, reuses its colour variables.
+   ========================================================= */
+
+.page-head { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%); color: var(--white); padding: clamp(1.8rem, 4vw, 3rem) 0; }
+.page-head h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 0.4rem; }
+.page-head p { margin: 0; color: rgba(255, 255, 255, 0.82); max-width: 44em; }
+
+.form-wrap { padding: 2rem 0 4rem; }
+
+.notice {
+  background: var(--amber-soft); border: 1px solid #ecd9a6; color: #5c4200;
+  border-radius: var(--radius); padding: 0.9rem 1.1rem; font-size: 0.92rem; margin-bottom: 1.4rem;
+}
+.notice p { margin: 0; }
+
+.toolbar { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.4rem; }
+button.btn { font: inherit; font-weight: 600; cursor: pointer; }
+.btn-outline { background: transparent; color: var(--navy); border-color: var(--navy); }
+.btn-outline:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
+
+.form-section {
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 1.5rem; margin-bottom: 1.2rem;
+}
+.form-section h2 { font-size: 1.35rem; margin-bottom: 0.2rem; }
+.section-intro { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.2rem; }
+
+.field-grid { display: grid; gap: 1.1rem; grid-template-columns: minmax(0, 1fr); }
+.field { min-width: 0; }
+.field label, .yn-label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.35rem; }
+.tag {
+  display: inline-block; margin-left: 0.5rem; padding: 0.05rem 0.5rem; border-radius: 99px;
+  background: #eef1f4; color: var(--muted); font-size: 0.72rem; font-weight: 600; vertical-align: middle;
+}
+
+.input-wrap { display: flex; align-items: stretch; border: 1.5px solid #b9c2cb; border-radius: 10px; background: var(--white); overflow: hidden; }
+.input-wrap:focus-within { border-color: var(--green); box-shadow: 0 0 0 3px rgba(31, 157, 107, 0.2); }
+.unit { display: grid; place-items: center; padding: 0 0.8rem; background: #eef1f4; color: var(--muted); font-size: 0.85rem; font-weight: 600; min-width: 4.2rem; }
+.input-wrap input, .input-wrap select {
+  flex: 1; min-width: 0; border: 0; outline: 0; background: transparent;
+  font: inherit; color: var(--ink); padding: 0.7rem 0.8rem;
+}
+
+.has-error .input-wrap { border-color: var(--red); }
+.error { color: var(--red); font-size: 0.85rem; margin: 0.35rem 0 0; font-weight: 600; }
+
+/* Yes / No rows */
+.yn-list { display: grid; gap: 0; }
+.yn { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 1rem; padding: 0.75rem 0; border-top: 1px solid var(--line); }
+.yn:first-child { border-top: 0; }
+.yn-label { margin: 0; font-weight: 500; flex: 1 1 14rem; }
+.pills { display: flex; gap: 0.5rem; }
+.pills input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.pills label {
+  margin: 0; min-width: 4.2rem; text-align: center; cursor: pointer;
+  padding: 0.45rem 1rem; border: 1.5px solid #b9c2cb; border-radius: 999px; font-weight: 600; font-size: 0.92rem; background: var(--white);
+}
+.pills input:checked + label { background: var(--navy); border-color: var(--navy); color: var(--white); }
+.pills input:focus-visible + label { outline: 3px solid var(--green); outline-offset: 2px; }
+.yn .error { flex-basis: 100%; margin: 0; }
+.yn.has-error .yn-label { color: var(--red); }
+
+/* Error summary */
+.error-summary {
+  background: var(--red-soft); border: 1.5px solid var(--red); border-radius: var(--radius);
+  padding: 1rem 1.3rem; margin-bottom: 1.2rem;
+}
+.error-summary h2 { font-size: 1.1rem; margin-bottom: 0.5rem; color: #8e2a1f; }
+.error-summary ul { list-style: disc; padding-left: 1.2rem; }
+.error-summary a { color: #8e2a1f; }
+.error-summary:focus { outline: 3px solid var(--red); outline-offset: 2px; }
+
+.submit-row { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; margin-top: 1.6rem; }
+.submit-row .btn { padding: 0.95rem 2rem; font-size: 1.05rem; }
+.submit-note { color: var(--muted); font-size: 0.88rem; margin: 0; }
+
+@media (min-width: 720px) {
+  .field-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem 1.5rem; }
+  .form-section { padding: 1.8rem; }
+}

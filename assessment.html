@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f2a43">
+  <title>Assessment | SME Finance Readiness Simulator</title>
+  <meta name="description" content="Enter your business financials and practices to get a finance readiness score.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f2a43'/%3E%3Cpath d='M7 22l6-7 5 4 7-10' fill='none' stroke='%2336c28e' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="SME Finance Readiness Simulator, home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#1f9d6b"/>
+          <path d="M7 22l6-7 5 4 7-10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>SME Finance <strong>Readiness</strong></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#how-it-works">How it works</a>
+        <a href="index.html#dimensions">Scoring</a>
+        <a href="index.html#methodology">Methodology</a>
+        <a href="whatif.html">What-If</a>
+      </nav>
+      <a class="btn btn-small" href="index.html">Home</a>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="container">
+      <h1>Business financial assessment</h1>
+      <p>Enter your figures and practices. Your answers stay in this browser tab and are never sent anywhere.</p>
+    </div>
+  </section>
+
+  <main id="main" class="form-wrap">
+    <div class="container narrow">
+      <div class="notice">
+        <p><strong>Prototype tool.</strong> The result is an internal readiness index for learning and decision support. It is not a credit score or a prediction of loan approval.</p>
+      </div>
+
+      <div class="toolbar">
+        <button type="button" class="btn btn-outline btn-small" id="btn-demo">Load demo data</button>
+        <button type="button" class="btn btn-outline btn-small" id="btn-clear">Clear form</button>
+      </div>
+
+      <div id="error-summary" class="error-summary" role="alert" tabindex="-1" hidden></div>
+
+      <form id="assessment-form" novalidate>
+        <div id="form-sections"></div>
+
+        <div class="submit-row">
+          <button type="submit" class="btn">Calculate readiness score</button>
+          <p class="submit-note">All fields are required unless marked "context only".</p>
+        </div>
+      </form>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>SME Finance Readiness &amp; Improvement Simulator</strong></p>
+      <p>Built by Zunaira Fatima, BBA (Finance), COMSATS Vehari. Educational prototype; not financial advice.</p>
+    </div>
+  </footer>
+
+  <script src="js/fields.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

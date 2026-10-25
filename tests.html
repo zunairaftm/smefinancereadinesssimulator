@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f2a43">
+  <title>Scoring engine tests</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .t-wrap { width: min(860px, 100% - 2rem); margin: 2rem auto 4rem; }
+    .t-summary { font-size: 1.3rem; font-weight: 700; padding: 1rem 1.2rem; border-radius: 12px; margin-bottom: 1.2rem; }
+    .t-ok { background: var(--green-soft); color: #11663f; }
+    .t-bad { background: var(--red-soft); color: #8e2a1f; }
+    table { width: 100%; border-collapse: collapse; background: #fff; font-size: 0.92rem; }
+    th, td { text-align: left; padding: 0.5rem 0.7rem; border-bottom: 1px solid var(--line); }
+    .pass { color: #11663f; font-weight: 700; }
+    .fail { color: #8e2a1f; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <main class="t-wrap">
+    <h1>Scoring engine tests</h1>
+    <p>Checks <code>js/scoring.js</code> against the values stored in your Excel file. This page is for you only and is not part of the public site.</p>
+    <div id="summary" class="t-summary"></div>
+    <table>
+      <thead><tr><th>Test</th><th>Result</th><th>Got</th><th>Expected</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </main>
+  <script src="js/scoring.js"></script>
+  <script src="js/scoring.test.js"></script>
+  <script src="js/recommendations.js"></script>
+  <script src="js/recommendations.test.js"></script>
+  <script src="js/whatif.test.js"></script>
+  <script>
+    var results = runScoringTests(SME_ENGINE).concat(runRecommendationTests(SME_RECS)).concat(runWhatIfTests(SME_ENGINE));
+    var passed = results.filter(function (r) { return r.pass; }).length;
+    var summary = document.getElementById('summary');
+    summary.textContent = passed + ' of ' + results.length + ' tests passed';
+    summary.className = 't-summary ' + (passed === results.length ? 't-ok' : 't-bad');
+    var rows = document.getElementById('rows');
+    results.forEach(function (r) {
+      var tr = document.createElement('tr');
+      [r.name, r.pass ? 'PASS' : 'FAIL', String(r.actual), String(r.expected)].forEach(function (text, idx) {
+        var td = document.createElement('td');
+        td.textContent = text;
+        if (idx === 1) td.className = r.pass ? 'pass' : 'fail';
+        tr.appendChild(td);
+      });
+      rows.appendChild(tr);
+    });
+  </script>
+</body>
+</html>
